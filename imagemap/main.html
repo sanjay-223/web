@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Map</title>
+    <style>
+        body{
+            margin:10px;
+        }
+        h1{
+            text-shadow: 2px 2px 5px red;
+           margin-left:35%;
+        }
+    </style>
+</head>
+<body>
+    <h1 >IMAGE MAPPING</h1>
+    <div style="margin-left:25px;font-size: large;font-family: 'Times New Roman', Times, serif;">
+        <p>Click on the below image components to view its details...</p>
+    </div>
+    <div style="margin-left:100px;">
+    <img src="computer.webp" usemap="#image-map">
+    </div>
+<map name="image-map">
+    <area target="_self" alt="cpu" title="cpu" href="cpu.html" coords="20,28,129,263" shape="rect">
+    <area target="_self" alt="computer" title="computer" href="monitor.html" coords="137,23,143,14,400,15,406,21,408,188,402,197,308,199,310,228,346,228,349,242,193,241,197,228,235,227,236,201,143,198,136,192,136,192" shape="poly">
+    <area target="_self" alt="keyboard" title="keyboard" href="keyboard.html" coords="138,250,127,278,134,292,404,292,409,282,400,249" shape="poly">
+    <area target="_self" alt="mouse" title="mouse" href="mouse.html" coords="419,259,456,251,471,257,480,266,480,279,466,284,442,280,420,270" shape="poly">
+</map>
+</body>
+</html>
