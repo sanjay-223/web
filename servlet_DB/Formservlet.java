@@ -14,6 +14,7 @@ String mail=req.getParameter("email");
 String phno=req.getParameter("phno");
 String pass=req.getParameter("pass");
 
+
 try{  
 Class.forName("com.mysql.jdbc.Driver");  
 Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb","root","31415"); 

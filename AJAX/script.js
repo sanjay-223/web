@@ -13,22 +13,22 @@ function checkUsernameAvailability() {
     const xhr = new XMLHttpRequest();
     xhr.open("POST", "check_username.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.onreadystatechange = function () {
-                const response = JSON.parse(xhr.responseText);
+    xhr.onreadystatechange = function () {  
+                const response = (xhr.responseText);
+                console.log(response);
 
-                if (response.status === "available") {
+                if (response === "available") {
                     availabilitySpan.innerText = "Available";
                     availabilitySpan.style.color = "green";
                     registerbox.style.color = "green";
-                } else {
+                } else {        
                     availabilitySpan.innerText = "Not Available";
                     availabilitySpan.style.color = "red";
                     registerbox.style.color = "red";
                 }
            
     };
-
-    // Clear availability status when the username input is empty
+    
     if (username === "") {
         availabilitySpan.innerText = "";
     }
