@@ -1,0 +1,13 @@
+<web-app>  
+  
+<servlet>  
+<servlet-name>vignesh</servlet-name>  
+<servlet-class>Write</servlet-class>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>vignesh</servlet-name>  
+<url-pattern>/write</url-pattern>  
+</servlet-mapping>  
+  
+</web-app>  
