@@ -15,19 +15,21 @@
         function validation(data) {
             var xmlreq = new XMLHttpRequest();
             xmlreq.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
                     document.getElementById("response").innerHTML = this.responseText;
-                }
             };
             xmlreq.open('GET', 'validate.php?q=' + data, true);
             xmlreq.send();
         }
 
         function valid() {
-            if (document.getElementById("response").innerHTML != "") {
+            if (document.getElementById("response").innerHTML === "Available.") {
+                // window.location.href = "success.html";
+                return true;
+            }
+            else {
+                window.alert("Enter Valid Username!");
                 return false;
             }
-            return true;
         }
     </script>
 </body>
